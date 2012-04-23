@@ -11,7 +11,7 @@ See any script source for example usage.
 
 If you're submitting a script, be sure to include a usage example in the comments!
 
-Always include a shebang line (e.g. `#!/bin/bash`, `#!/usr/bin/env python`) in your script.
+Always include a shebang line (e.g. `#!/usr/bin/env bash`, `#!/usr/bin/env python`) in your script.
 This allows users to give it executable permissions and execute it directly.
 
     $ chmod +x myscript.sh
