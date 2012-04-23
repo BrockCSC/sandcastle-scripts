@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# Create your own personal web space on the Sandcastle server from Brock CS.
+# Create your own personal web space on the Sandcastle server.
 #
-# Copyright 2012 Dennis Ideler.
-# For usage, see www.cosc.brocku.ca/~di07ty/HOWTO
+# Copyright 2012 Dennis Ideler
 #
-# References:
+# For usage and more info:
+# http://www.cosc.brocku.ca/~di07ty/HOWTO
 # http://www.dma.org/homepage.html
 # http://www.zzee.com/solutions/unix-permissions.shtml
 
-cd $(pwd | grep -o '/home/std/[a-z][a-z][0-9][0-9][a-z][a-z]')  # Go to the student's home directory.
-chmod 711 ./  # Give current directory the proper permissions.
+cd $HOME
+chmod 711 ./  # All permissions for owner, execute permissions for everyone else.
 mkdir public_html  # Create the web directory.
-chmod 711 public_html  # Make it searchable.
-cd public_html  # Enter directory.
+chmod 711 public_html
+cd public_html
 echo "It works!" > index.html  # Create the homepage.
-chmod 644 index.html  # Make it accessible to the world.
+chmod 644 index.html  # Read and write for owner, read only for everyone else.
 echo "Access your homepage at \"www.cosc.brocku.ca/~your_username\"."
 echo "Edit \"index.html\" to change your homepage."
