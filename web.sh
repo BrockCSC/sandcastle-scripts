@@ -1,20 +1,18 @@
 #!/usr/bin/env bash
 
 # Create your own personal web space on the Sandcastle server.
+# 711: All permissions for owner, execute permissions for everyone else.
+# 644: Read and write for owner, read only for everyone else.
+# For usage, see www.cosc.brocku.ca/~di07ty/HOWTO
 #
-# Copyright 2012 Dennis Ideler
-#
-# For usage and more info:
-# http://www.cosc.brocku.ca/~di07ty/HOWTO
-# http://www.dma.org/homepage.html
-# http://www.zzee.com/solutions/unix-permissions.shtml
+# (C) 2012 Dennis Ideler
 
-cd $HOME
-chmod 711 ./  # All permissions for owner, execute permissions for everyone else.
-mkdir public_html  # Create the web directory.
-chmod 711 public_html
+set -x
+set -e
+cd && chmod 711 ./
+mkdir -p -m 711 public_html
 cd public_html
-echo "It works!" > index.html  # Create the homepage.
-chmod 644 index.html  # Read and write for owner, read only for everyone else.
+echo "It works!" > index.html
+chmod 644 index.html
 echo "Access your homepage at \"www.cosc.brocku.ca/~your_username\"."
-echo "Edit \"index.html\" to change your homepage."
+echo "Edit \"index.html\" to change your homepage.
