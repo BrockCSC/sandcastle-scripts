@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+# Prints a single file to the B&W printer in J310.
+# Use for printing code (especially C/C++).
+# Possible printer options are: psj310, psj310c
+# Other printers exist but should not be used by students.
+#
+# See the man pages for lp, lpr, and lpstat for more info.
+# Also check out: http://www.cups.org/documentation.php/doc-1.2/options.html
+#
+# Usage: ./print myfile.cpp
+
+lpr -P psj310 -o prettyprint "$1"

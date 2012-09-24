@@ -29,7 +29,17 @@ These resources will teach you more than you need to know:
 * [Shell Scripting](http://steve-parker.org/sh/sh.shtml) by Steve Parker
 
 Are we missing an awesome guide? Share it with us!
-    
+
+Tips
+----
+Some good flags to set at the beginning of your script:
+
+```
+set -e # Same as 'set -o errexit' - exit on error
+set -x # Same as 'set -o xtrace' - show execution on stdout
+set -u # Same as 'set -o nounset' - exit if script tries to use an uninitialized variable
+```
+
 Use at your own risk
 --------------------
 
