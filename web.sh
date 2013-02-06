@@ -7,12 +7,12 @@
 #
 # (C) 2012 Dennis Ideler
 
-set -x
-set -e
+set -o xtrace
+set -o errexit
 cd && chmod 711 ./
 mkdir -p -m 711 public_html
 cd public_html
 echo "It works!" > index.html
 chmod 644 index.html
 echo "Access your homepage at \"www.cosc.brocku.ca/~your_username\"."
-echo "Edit \"index.html\" to change your homepage.
+echo "Edit \"index.html\" to change your homepage."
