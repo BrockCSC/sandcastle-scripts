@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 
-# Prints a single file to the B&W printer in J310.
+# IMPORTANT: Remote printing has been disabled on Sandcastle :(
+#
+# Prints your files to the B&W printer in J310.
 # Use for printing code (especially C/C++).
 # Possible printer options are: psj310, psj310c
 # Other printers exist but should not be used by students.
@@ -10,4 +12,4 @@
 #
 # Usage: ./print myfile.cpp
 
-lpr -P psj310 -o prettyprint "$1"
+lpr -P psj310 -o prettyprint "$@"
