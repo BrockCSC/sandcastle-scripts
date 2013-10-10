@@ -15,11 +15,11 @@ Always include a shebang line (e.g. `#!/usr/bin/env bash`, `#!/usr/bin/env pytho
 This allows users to give it executable permissions and execute it directly.
 
     $ chmod +x myscript.sh
-    $ ./myscript
+    $ ./myscript.sh
     
 instead of
     
-    $ sh myscript.sh
+    $ bash myscript.sh  # or sh myscript.sh
     
 Learning material
 -----------------
